@@ -20,4 +20,4 @@ export function DataListSkeleton() {
       <TicketRowSkeleton />
     </div>
   )
-}
+};

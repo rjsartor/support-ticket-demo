@@ -4,6 +4,8 @@ interface TextInputProps extends React.HTMLAttributes<HTMLElement> {
   label: string;
   name: any;
   multi?: boolean;
+  type?: string;
+  pattern?: string;
 };
 
 export const StyledTextInput: FC<TextInputProps> = ({ label, name, multi = false, ...rest }) => {
