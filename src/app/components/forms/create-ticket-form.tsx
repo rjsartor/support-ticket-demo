@@ -5,6 +5,8 @@ import { createTicket } from '../../lib/actions';
 import { useRef } from 'react'
 import Button from "../button";
 
+export const EMAIL_REGEX_PATTERN = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}";
+
 export type CreateTicketFormData = {
   name: string;
   email: string;
@@ -41,7 +43,7 @@ export function CreateTicketForm() {
       {error && <p className='text-red-500 mt-4'>{error}</p>}
       <div className="mt-4 flex flex-wrap">
         <StyledTextInput label='Name' name='name' />
-        <StyledTextInput label='Email' name='email' type='email' pattern="/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/" />
+        <StyledTextInput label='Email' name='email' type='email' pattern={EMAIL_REGEX_PATTERN} />
         <StyledTextInput label='Description' name='description' multi={true} />
       </div>
       <Button label="Submit Ticket" />

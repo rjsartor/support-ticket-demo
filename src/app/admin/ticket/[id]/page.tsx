@@ -51,7 +51,7 @@ export default async function Page({ params }: { params: { id: string } }) {
         </div>
         <div className='flex w-full'>
           <div className="mb-4 w-full">
-            <TicketResponseForm id={id} />
+            <TicketResponseForm ticket={ticket} />
           </div>
         </div>
       </div>
