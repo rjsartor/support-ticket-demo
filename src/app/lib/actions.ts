@@ -56,7 +56,8 @@ export async function updateStatus(formData: FormData) {
       WHERE id = ${id}
       RETURNING id
     `;
-    revalidatePath(`/admin/ticket/${id}`);
+
+    revalidatePath('/admin/tickets');
     return record;
   } catch (error) {
     return {
