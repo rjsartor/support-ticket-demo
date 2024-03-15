@@ -1,4 +1,4 @@
-https://support-ticket-demo.vercel.app/
+### https://support-ticket-demo.vercel.app/
 
 This application is a Ticket Support System demo built with Next.js and Tailwind, persisted with PostgreSQL and deployed with Vercel. The focus of this exercise was getting more familiar with Next.js App Router and Server Actions, using SSR and Server Components as much as possible.
 
