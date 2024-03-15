@@ -28,7 +28,7 @@ export default async function Page({
     <div className="bg-white h-3/4 p-8 xl:w-2/3 lg:w-3/4 md:w-full flex flex-col h-screen">
       <div className="w-full bg-white p-6 rounded-md shadow-md border border-gray-300">
         <Header header='Ticket List' subheader='View and select existing support tickets.' />
-        <TicketStatusTabs />
+        <TicketStatusTabs status={status} />
         <Suspense fallback={<Loading />}>
           <DataList 
             data={data}

@@ -8,13 +8,13 @@ import { SupportTicketStatusEnum } from "../lib/definitions";
 // to work with any types of tabs for any DataList.
 
 // TODO: make this a generic Tabs component that can be used with/in DataList.
-export function TicketStatusTabs() {
+export function TicketStatusTabs({ status }: { status: SupportTicketStatusEnum} ) {
   const unSelectedStyles = 'bg-gray-50 border-gray-100 border border-b-0'
   const selectedStyles = 'px-2 py-2 bg-blue-600 text-white shadow-md';
   const baseStyles = 'w-1/3 border-gray-700 rounded-b-none rounded-t-md hover:bg-blue-600';
 
   const router = useRouter();
-  const [tab, setTab] = useState<SupportTicketStatusEnum>(SupportTicketStatusEnum.new);
+  const [tab, setTab] = useState<SupportTicketStatusEnum>(status || SupportTicketStatusEnum.new);
 
   const handleTabClick = (tab: SupportTicketStatusEnum): void => {
     router.push(`?status=${tab}&page=${1}`);
