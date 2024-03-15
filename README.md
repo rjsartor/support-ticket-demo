@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+https://support-ticket-demo.vercel.app/
 
-## Getting Started
+This application is a Ticket Support System demo built with Next.js and Tailwind, persisted with PostgreSQL and deployed with Vercel. The focus of this exercise was getting more familiar with Next.js App Router and Server Actions, using SSR and Server Components as much as possible.
 
-First, run the development server:
+The application includes 3 pages. The first is the Create Ticket home screen at '/':
+![Home Page](/public/create-ticket-page.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Here a user can submit new tickets. There is HTML form validation in the frontend and schema validation in the backend.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The second is Ticket List at '/admin/tickets': 
+![Tickets List](/public/admin-ticket-list-page.png)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This is a server-side paginated list of submitted tickets, displayed by their status. Admins can view tickets of different status by using the tabs.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The last is a detailed ticket view at '/admin/ticket/[id]':
+![Ticket Details](/public/admin-ticket-details.png)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+This displays all ticket details as well provides inputs to update ticket status and send a response message. No response message is actually being sent yet, but that functional will come later.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+All application code is stored in src/app. It's organized following Next's file-system based router where folders are used to define routes and the `page.tsx` files represent pages. 
+All other components live in `components/` or `components/forms` directories.
+The `lib` directory contains the server actions and definitions.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

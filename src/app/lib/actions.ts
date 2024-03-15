@@ -3,6 +3,12 @@ import { z } from 'zod';
 import { SupportTicketStatusValues } from "./definitions";
 import { sql } from "@vercel/postgres";
 import { revalidatePath } from 'next/cache';
+
+// This file contains the Server Actions for creating and updating tickets. 
+// Ideally I would move this postgres actions into their own service, ie. TicketsService, 
+// so they can be used outside of just server actions. 
+// As the app grows in size I would also create a generic PostgresService that the individual resource
+// services would use/inherit from.
  
 const CreateTicketSchema = z.object({
   name: z.string(),

@@ -3,6 +3,8 @@ import { FC } from "react";
 import { updateStatus } from "../../lib/actions";
 import { SupportTicketStatusEnum } from "../../lib/definitions";
 
+// Another simple form for changing Ticket status. 
+// Here I have to manually trigger the form submit through the select onChange.
 export const UpdateStatusForm: FC<{ status: SupportTicketStatusEnum, id: string }> = ({ status, id }) => {
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const form = e.target.form;

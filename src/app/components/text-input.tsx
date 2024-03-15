@@ -2,12 +2,13 @@ import { FC } from "react";
 
 interface TextInputProps extends React.HTMLAttributes<HTMLElement> {
   label: string;
-  name: any;
+  name: string;
   multi?: boolean;
   type?: string;
   pattern?: string;
 };
 
+// Reusable styled text input which supports all input type usecases for this exercise
 export const StyledTextInput: FC<TextInputProps> = ({ label, name, multi = false, ...rest }) => {
   return (
     <div className="w-3/4 md:w-3/4 flex flex-col md:mt-2 mt-8 mb-4">

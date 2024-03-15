@@ -1,3 +1,4 @@
+'use server';
 import { SupportTicketStatusEnum } from '@/app/lib/definitions';
 import { Suspense } from 'react';
 import DataList from '@/app/components/data-list';
@@ -8,12 +9,16 @@ import PaginationControls from '@/app/components/pagination-controls';
 import { TicketStatusTabs } from '@/app/components/ticket-status-tabs';
 import Header from '@/app/components/header';
 
+// Page displaying tickets list at /admin/tickets. This is a server component that 
+// fetches tickets based on status and page searchParams and passes the data down DataList.
+// Status and page are retrieved from searchParams, another prop passed to server components.
 export default async function Page({
   searchParams,
 }: {
   searchParams: { [key: string]: string | string[] | undefined }
 }) {
-  const status = searchParams.status as SupportTicketStatusEnum; 
+  // use default searchParams if not found
+  const status = searchParams.status as SupportTicketStatusEnum ?? SupportTicketStatusEnum.new; 
   const page = Number(searchParams.page) ?? 1;
 
   const { data, rowCount } = await fetchTickets(status, page);

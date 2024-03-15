@@ -4,6 +4,7 @@ import { StyledTextInput } from "../text-input";
 import { updateResponse } from "../../lib/actions";
 import Button from "../button";
 
+// Another simple form for utilizing the native HTML formData and to call the Server Action.
 export const TicketResponseForm: FC<{ id: string }> = ({ id }) => {
   const formRef = useRef<HTMLFormElement>(null);
  

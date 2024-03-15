@@ -10,6 +10,8 @@ enum Pathnames {
   admin = '/admin',
 }
 
+// Very basic vertical side Nav component. Didn't have time to make it responsive, 
+// but would shift it horizontally top of the page on small/mobile devices with more time.
 export default function Nav() {
   const pathname = usePathname();
   const selectedClassNames = 'px-4 py-4 bg-blue-600 hover:bg-blue-700 rounded text-white font-semibold';

@@ -9,6 +9,8 @@ interface PaginationControlsProps {
   totalPages: number,
 };
 
+// Reusable PaginationControls component, assuming that other lists use URL params for pagination
+// All it does is decrement/increment the page and add page params to existing params
 export default function PaginationControls({ currentPage, totalPages }: PaginationControlsProps) {
   const searchParams = useSearchParams();
   const pathname = usePathname();

@@ -4,6 +4,7 @@ interface FlexCellProps {
   style?: any;
 };
 
+// Generic cell for DataList DataRow
 const FlexCell = ({ header, value, style }: FlexCellProps) => {
   const baseStyle = 'flex-1 flex-col p-4';
   const headerStyle = 'text-gray-400';

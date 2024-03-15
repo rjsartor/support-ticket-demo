@@ -3,6 +3,8 @@ import { SupportTicket, SupportTicketStatusEnum } from './definitions';
 
 export const TICKET_OFFSET = 5;
 
+// These queries would also be moved into their own TicketsService for better resuability and maintainability
+
 export async function fetchTickets(status: SupportTicketStatusEnum, page?: number | undefined): Promise<any> {
   try {
     const _page = page || 1;

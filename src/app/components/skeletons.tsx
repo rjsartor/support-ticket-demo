@@ -11,6 +11,8 @@ const TicketRowSkeleton = () => (
   </div>
 );
 
+// An attempt at trying out skeletons for loading. The design doesn't actually match the DataList, but 
+// its working as intended with the the loading.tsx file and <Supsense /> component.
 export function DataListSkeleton() {
   return (
     <div className="flex flex-col overflow-y-auto">

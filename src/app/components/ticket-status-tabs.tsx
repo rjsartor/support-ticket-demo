@@ -3,6 +3,11 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { SupportTicketStatusEnum } from "../lib/definitions";
 
+// Custom Tab component for managing the different status of support tickets.
+// It would take some refactoring, but this component could be made more generic
+// to work with any types of tabs for any DataList.
+
+// TODO: make this a generic Tabs component that can be used with/in DataList.
 export function TicketStatusTabs() {
   const unSelectedStyles = 'bg-gray-50 border-gray-100 border border-b-0'
   const selectedStyles = 'px-2 py-2 bg-blue-600 text-white shadow-md';

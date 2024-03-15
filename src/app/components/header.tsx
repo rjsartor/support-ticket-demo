@@ -3,6 +3,7 @@ interface HeaderSubheaderProps {
   subheader?: string;
 };
 
+// Reusable Header and Subheader component.
 export default function Header({ header, subheader }: HeaderSubheaderProps) {
   return (
     <header className="mb-6">

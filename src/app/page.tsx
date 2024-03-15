@@ -2,6 +2,7 @@
 import { CreateTicketForm } from "./components/forms/create-ticket-form";
 import Header from "./components/header";
 
+// The main "home" page of the application. It's a server component that displays the CreateTicketForm.
 export default async function Page() {
   return (
     <div className="bg-white p-8 xl:w-1/2 lg:w-2/3 md:w-full">

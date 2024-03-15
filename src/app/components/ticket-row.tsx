@@ -18,6 +18,7 @@ const statusStyles: { [key in SupportTicket['status']]: string } = {
   [SupportTicketStatusEnum.resolved]: "text-green-500",
 };
 
+// Formatted row the Ticket data which gets passed as a prop to DataList
 const TicketRow = ({ item: ticket }: TicketRowProps) => (
   <Link 
     href={`/admin/ticket/${ticket?.id}`} 
